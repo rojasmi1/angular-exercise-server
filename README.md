@@ -2,31 +2,12 @@
 
 ## Requirements
 
-* yarn >= 1.2.1
 * node >= 8.9.0
 
 ## Running the project
 
-* Compile typescript
-
-```bash
-yarn build
-```
-
-* Run server in dev mode
-
-```bash
-yarn dev
-```
-
-* Run Unit Tests
-
-```bash
-yarn test
-```
-
-* Check for sintax errors with eslint
-
-```bash
-yarn lint
-```
+* `npm run build`: Compile typescript
+* `npm run dev`: Run server in dev mode
+* `npm run test`: Run Unit Tests
+* `npm run lint`: Check for sintax errors with eslint 
+* `npm run lint:fix`: Check for sintax errors but fixing them when possible
