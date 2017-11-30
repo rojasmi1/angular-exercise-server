@@ -4,3 +4,4 @@ node_modules/
 .idea
 variables.env
 .vscode/
+/dist
