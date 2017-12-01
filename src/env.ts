@@ -1,5 +1,5 @@
-'use strict'
+'use strict';
 
-const dotenv = require('dotenv')
+import dotenv = require('dotenv');
 
-dotenv.config({ path: 'variables.env' })
+dotenv.config({ path: 'variables.env' });
