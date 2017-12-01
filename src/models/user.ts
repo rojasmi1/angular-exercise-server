@@ -15,7 +15,6 @@ export class User {
     this.age = age;
   }
 
-
   public get UserName(): string {
     return this.userName;
   }
@@ -23,7 +22,6 @@ export class User {
   public set UserName(value: string) {
     this.userName = value;
   }
-
 
   public get FirstName(): string {
     return this.firstName;
@@ -33,7 +31,6 @@ export class User {
     this.firstName = value;
   }
 
-
   public get LastName(): string {
     return this.lastName;
   }
@@ -41,7 +38,6 @@ export class User {
   public set LastName(value: string) {
     this.lastName = value;
   }
-
 
   public get Email(): string {
     return this.email;
@@ -51,7 +47,6 @@ export class User {
     this.email = value;
   }
 
-
   public get Age(): number {
     return this.age;
   }
@@ -59,6 +54,5 @@ export class User {
   public set Age(value: number) {
     this.age = value;
   }
-
 
 }

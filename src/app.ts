@@ -1,6 +1,6 @@
 import * as bodyParser from 'body-parser';
 import * as express from 'express';
-import errorHandler from './handlers/errorHandlers';
+import errorHandler from './handlers/error-handlers';
 import routes from './routes/index';
 
 class App {

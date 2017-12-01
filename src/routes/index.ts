@@ -1,6 +1,6 @@
 import * as express from 'express';
-import { UserController } from '../controllers/userController';
-import errorHandlers from '../handlers/errorHandlers';
+import { UserController } from '../controllers/user-controller';
+import errorHandlers from '../handlers/error-handlers';
 
 class Routes {
   public router: any;
