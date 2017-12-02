@@ -49,8 +49,8 @@ class ErrorHandler {
    *  @param {object} res - HTTPResponse object
    *  @param {fuction} next - Function that passes things through the middleware
    */
-  public productionErrors = (err, req, res) => {
-    res.render('error', {
+  public productionErrors = (err, req, res, next) => {
+    res.json({
       error: {},
       message: err.message,
     });

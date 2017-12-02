@@ -15,7 +15,7 @@ export class UserController {
     };
 
     const results = await pool.query(query);
-    if (results && results.rows[1]) {
+    if (results && results.rows[0]) {
       const {
         username,
         first_name,

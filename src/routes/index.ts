@@ -8,7 +8,7 @@ class Routes {
   constructor() {
     const userController = new UserController();
     this.router = express.Router();
-    this.router.get('/api/users/:username/details', errorHandlers.catchErrors(userController.getUser));
+    this.router.get('/users/:username/details', errorHandlers.catchErrors(userController.getUser));
   }
 }
 
