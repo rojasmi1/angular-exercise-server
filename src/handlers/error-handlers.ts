@@ -34,7 +34,7 @@ class ErrorHandler {
     err.stack = err.stack || '';
     const errorDetails = {
       message: err.message,
-      stackHighlighted: err.stack.replace(/[a-z_-\d]+.js:\d+:\d+/gi, '<mark>$&</mark>'),
+      stack: err.stack,
       status: res.status,
     };
     res.format({
