@@ -6,7 +6,7 @@ const pool = dbConnector.getPool();
 
 export class UserController {
 
-  public async getUser(req, res) {
+  public async getUser(req, res, next) {
     const usernameParam = req.params.username;
     const query = {
       name: 'fetch-user-by-username',
@@ -15,16 +15,20 @@ export class UserController {
     };
 
     const results = await pool.query(query);
-    const {
-      username,
-      first_name,
-      last_name,
-      email_address,
-      age,
-      id,
-    } = results.rows[0];
-    const user = new User(username, first_name, last_name, email_address, age);
-    res.json(user);
+    if (results && results.rows[1]) {
+      const {
+        username,
+        first_name,
+        last_name,
+        email_address,
+        age,
+        id,
+      } = results.rows[0];
+      const user = new User(username, first_name, last_name, email_address, age);
+      res.json(user);
+    } else {
+      res.status(404).json({ error: 'User not found', status: 404 });
+    }
   }
 
 }
