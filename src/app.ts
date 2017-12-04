@@ -8,9 +8,9 @@ class App {
 
   constructor() {
     this.express = express();
+    this.mountMiddlewares();
     this.mountRoutes();
     this.mountErrorHandlers();
-    this.mountMiddlewares();
   }
 
   private mountRoutes(): void {
@@ -21,6 +21,13 @@ class App {
     // Takes the raw requests and turns them into usable properties on req.body
     this.express.use(bodyParser.json());
     this.express.use(bodyParser.urlencoded({ extended: true }));
+
+    // Allow CORS
+    this.express.use((req, res, next) => {
+      res.header('Access-Control-Allow-Origin', '*');
+      res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+      next();
+    });
   }
 
   private mountErrorHandlers(): void {
