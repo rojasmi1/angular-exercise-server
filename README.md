@@ -1,4 +1,4 @@
-# o3 Exercise
+# Angular Server Exercise
 
 ## Requirements
 
@@ -13,7 +13,7 @@ This is a list of the environment variables required to run the server
 * PGHOST: Postgres DB host
 * PGUSER: Postgres user with access to the database
 * PGPASSWORD: Postgres user's password
-* PGDATABASE: The database name (o3_exercise)
+* PGDATABASE: The database name
 * PGPORT: Database port (5432)
 
 Note: Define the variables globally in the server machine or add them to a `variables.env` file in the root of the project.
